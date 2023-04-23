@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popovers</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <script src="./bootstrap/js/bootstrap.js"></script>
+    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+
+</head>
+<body>
+    <h1 class="text-center pt-3">Enable popovers</h1>
+    <h2 class="text-center pt-3">Popovers</h2> 
+    <section class="container d-flex align-items-center justify-content-center">
+        <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+    </section>
+
+
+    <h2 class="text-center pt-5">Four directions</h2> 
+    <section class="container d-flex align-items-center justify-content-center">
+        <button type="button" class="btn btn-secondary m-1" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+            Popover on top
+        </button>
+        <button type="button" class="btn btn-secondary m-1" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">
+            Popover on right
+        </button>
+        <button type="button" class="btn btn-secondary m-1" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
+            Popover on bottom
+        </button>
+        <button type="button" class="btn btn-secondary m-1" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">
+            Popover on left
+        </button>
+    </section>
+
+
+    <h2 class="text-center pt-5">Disabled elements</h2> 
+    <section class="container d-flex align-items-center justify-content-center">
+        <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover">
+            <button class="btn btn-primary" type="button" disabled>Disabled button</button>
+        </span>
+    </section>
+
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
+
+    <section class="pt-3 m-5">
+        <button type="button" class="btn btn-light"><a href="file:///D:/Proyecto/inicio.html" class="card-link" style="text-decoration: none;">Return</a></button>
+    </section>
+
+</body>
+</html>
